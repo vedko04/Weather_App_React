@@ -11,4 +11,4 @@ git clone + ссылка на этот репозиторий
 npm start dev
 ```
 
-Спасибо @sldo за UIkit [Vega](https://github.com/vega-ui/template-react)
+Спасибо @SlDo за UIkit [Vega](https://github.com/vega-ui)
