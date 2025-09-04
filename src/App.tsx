@@ -1,5 +1,5 @@
 import './App.module.css'
-import {Button, Text, TextField} from "@vega-ui/react";
+import {Alert, Button, Text, TextField} from "@vega-ui/react";
 import {useEffect, useRef, useState} from "react";
 /*
 import style from './App.module.css'
@@ -9,6 +9,7 @@ function App() {
 
     const inputRef = useRef()
     const [WeatherData, setWeatherData] = useState(false);
+    const [isVisibleInfo, setIsVisibleInfo] = useState(false);
 
 /*    const allicons = {
         "01d": clear_icon,
@@ -41,7 +42,8 @@ function App() {
                  humidity: data.main.humidity,
                  windSpeed: data.wind.speed,
                  temperature: Math.floor(data.main.temp),
-                 location: data.name
+                 location: data.name,
+                 icon: data.weather[0].icon,
              });
          }catch(error){
              console.log(error)
@@ -59,12 +61,15 @@ function App() {
                 <TextField placeholder="Enter your city..." ref={inputRef}></TextField>
                 <Button onClick={()=>search(inputRef.current.value)}>Search</Button>
             </div>
+            <img src={`./src/assets/${WeatherData.icon}.png`} alt="Weather"/>
             <div className="Grid">
                 <Text>Город: {WeatherData.location}</Text>
                 <Text>Температура: {WeatherData.temperature} C</Text>
-                <Text>Влажность: {WeatherData.humidity}</Text>
+                <Text>Влажность: {WeatherData.humidity}%</Text>
                 <Text>Скорость ветра: {WeatherData.windSpeed} м/с</Text>
             </div>
+            <Button className="quest" onClick={() => setIsVisibleInfo((prev) => !prev)}>?</Button>
+            {isVisibleInfo && <Alert className="alert">freak</Alert>}
         </div>
     </div>
   )
