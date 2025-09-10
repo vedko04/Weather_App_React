@@ -12,3 +12,5 @@ npm start dev
 ```
 
 Спасибо @SlDo за UIkit [Vega](https://github.com/vega-ui)
+
+[Опробовать проект через vercel](https://weather-app-react-9p57-q0mbpv6y0-vanyaws-projects.vercel.app)
