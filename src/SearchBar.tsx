@@ -50,9 +50,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     };
 
     return (
-        <div className={styles.searchBar}>
+        <div className="SearchBar">
             <TextField
-                className={styles.input}
                 placeholder="Enter your city..."
                 value={city}
                 onChange={handleChange}
@@ -61,15 +60,15 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
                 Search
             </Button>
 
-            {loading && <div className={styles.loading}>Loading...</div>}
+            {loading && <div className="ListOfCity">Loading...</div>}
 
             {suggestions.length > 0 && (
-                <ul className={styles.suggestions}>
+                <ul className="ListCity">
                     {suggestions.map((s, index) => (
                         <li
                             key={index}
                             onClick={() => handleSearch(s)}
-                            className={styles.suggestionItem}
+                            className="CityItem"
                         >
                             {s}
                         </li>

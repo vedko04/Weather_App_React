@@ -97,8 +97,8 @@ body {
   flex-direction: column;
   gap: 40px;
   padding: 20px;
-  width: 550px;
-  height: 400px;
+  width: auto;
+  height: auto;
   border-radius: 14px;
   border: 3px solid var(--color-smoke-accent-700);
   position: relative;
@@ -126,4 +126,17 @@ body {
   display: flex;
   flex-direction: row;
   gap: 5px;
+}
+
+.ListCity{
+  padding: 0;
+  margin: 0;
+}
+
+.CityItem{
+  padding: 10px;
+  list-style: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 150px;
 }
