@@ -21,8 +21,10 @@ function App() {
                 location: data.name,
                 icon: data.weather[0].icon,
             });
+            console.log(data);
         } catch (error) {
             console.log(error);
+            alert('Не правильно написано название города!');
         }
     }
 
