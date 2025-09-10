@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, {type RefObject, useState} from 'react';
 import { TextField, Button } from "@vega-ui/react";
-import styles from './SearchBar.module.css';
+// import styles from './SearchBar.module.css';
 
 interface SearchBarProps {
     onSearch: (city: string) => void;
+    inputRef: RefObject<HTMLInputElement | null>
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch, inputRef }) => {
     const [city, setCity] = useState("");
     const [suggestions, setSuggestions] = useState<string[]>([]);
     const [loading, setLoading] = useState(false);
@@ -54,6 +55,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
             <TextField
                 placeholder="Enter your city..."
                 value={city}
+                ref={inputRef}
                 onChange={handleChange}
             />
             <Button onClick={() => handleSearch()}>

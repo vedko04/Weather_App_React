@@ -73,6 +73,11 @@
   --color-secondary-1000: var(--color-graphite-accent-1000);
 }
 
+*{
+  font-family: Arial, "Times New Roman";
+
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -118,7 +123,7 @@ body {
   gap: 20px;
 }
 .alert{
-  bottom: -150px;
+  bottom: -180px;
   position: absolute;
 }
 

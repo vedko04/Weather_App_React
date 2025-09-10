@@ -48,7 +48,7 @@ function App() {
                     </>
                 )}
                 <Button className="quest" onClick={() => setIsVisibleInfo((prev) => !prev)}>?</Button>
-                {isVisibleInfo && <Alert className="alert">
+                {isVisibleInfo && <Alert className="alert" title={""}>
                     Если у вас не получается найти ваш город, то возможно вы не правильно вводите его название на
                     английском или русском, или вводите его сокращенное название, на подобии, NY(New York) или LA(Los Angeles).
                     Будьте внимательны с правильным написанием городов. Удачи!
