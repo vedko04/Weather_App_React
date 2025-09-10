@@ -118,6 +118,12 @@ body {
   gap: 20px;
 }
 .alert{
-  bottom: -80px;
+  bottom: -150px;
   position: absolute;
+}
+
+.SearchBar{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
